@@ -22,6 +22,9 @@ dev = [
     "flake8",
     "pytest",
 ]
+docs = [
+    "pydoctor",
+]
 
 [tool.black]
 line-length = 79
@@ -29,6 +32,13 @@ line-length = 79
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+
+[tool.pydoctor]
+add-package = ["digestible"]
+project-name = "digestible"
+project-version = "0.1"
+docformat = "restructuredtext"
+html-output = "apidocs"
 
 [tool.setuptools.packages.find]
 where = ["."]
