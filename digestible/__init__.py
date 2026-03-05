@@ -35,4 +35,4 @@ def digest(o: JSONType) -> str:
     h = hashlib.shake_128()
     for chunk in json.JSONEncoder().iterencode(o):
         h.update(chunk.encode())
-    return base64.urlsafe_b64encode(b"\x20\x26" + h.digest(16)).decode()
+    return base64.urlsafe_b64encode(h.digest(16)).decode()
