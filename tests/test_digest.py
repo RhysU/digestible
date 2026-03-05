@@ -6,17 +6,20 @@ import pytest
 from digestible import digest
 
 CASES = [
-    (None, "KtLhiM3tliLbJ-hWaj3sMQ=="),
-    (True, "9pqHQJRzn-fsbYwTTZkT9Q=="),
-    (False, "z7kb3NcFWLXrrPXWZ5W0dg=="),
-    (0, "Yo55z3lIzRyhVs7nYxo0Rg=="),
-    (42, "YE7Zd-POmhwrvXqiP8tozg=="),
-    (3.14, "GsQFicPO3fpRsbx63XtozQ=="),
-    ("", "bd0H2eAFLX4ZcalQ9Ip_yw=="),
-    ("hello", "IfgaF7i8mVVAl2kylWfqOw=="),
-    ([], "wyM70eXPE_VqGMKFEwfzQw=="),
-    ([1, 2, 3], "hHwtSRMxaRKf12HM1jsW0Q=="),
-    ({}, "RoBn8-L4hTHbJUyclrDjNQ=="),
+    (None, "fvakllLWEjyo5TJ5Vm8RPA=="),
+    (True, "5DwJoS3S3e463uya639ERQ=="),
+    (False, "jvKimP7exHmPJTQKYeDkzQ=="),
+    (0, "HKHFFK9G1Rsgl2SYaNDBQg=="),
+    (42, "97xJ31IQthW2Y-IB3-VvYw=="),
+    (3.14, "245yMF1Nk6pygHN4dJJFiQ=="),
+    ("", "skm2cZ8ndcZDf3t-8kBUdw=="),
+    ("hello", "-z30OhN5TYcm6HuZu-gxoQ=="),
+    ([], "cS4tc63OQjWs0nTlAVv5Ug=="),
+    ([1, 2, 3], "7hUP-kq_pJB0r4R60YUeqA=="),
+    ({}, "nKVsf7y9mMmkvgdU4R8-Kg=="),
+    ({"a": {"b": 1}}, "TBE71TpLAtEtmOVy3U17uA=="),
+    ({"x": [1, {"y": 2}]}, "dlZ1Y3ep3XksfPOKCizN2Q=="),
+    ([{"a": 1}, {"b": [2, 3]}], "qHBOdNQT-XUGyqd6CsoYOA=="),
 ]
 
 
