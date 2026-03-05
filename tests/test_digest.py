@@ -15,11 +15,11 @@ CASES = [
     ("", "97eySbZxnyd1xkN_e37yQFR3"),
     ("hello", "97f7PfQ6E3lNhyboe5m76DGh"),
     ([], "97dxLi1zrc5CNazSdOUBW_lS"),
-    ([1, 2, 3], "97fuFQ_6Sr-kkHSvhHrRhR6o"),
+    ([1, 2, 3], "97fqnD5kLX9-GUoNZexehLTq"),
     ({}, "97ecpWx_vL2YyaS-B1ThHz4q"),
-    ({"a": {"b": 1}}, "97dMETvVOksC0S2Y5XLdTXu4"),
-    ({"x": [1, {"y": 2}]}, "97d2VnVjd6ndeSx884oKLM3Z"),
-    ([{"a": 1}, {"b": [2, 3]}], "97eocE501BP5dQbKp3oKyhg4"),
+    ({"a": {"b": 1}}, "97cSIjhdmv0UBP2zskqbEKlu"),
+    ({"x": [1, {"y": 2}]}, "97dCUij97kRFla7zNr0B7p3_"),
+    ([{"a": 1}, {"b": [2, 3]}], "97eHklypxMWn3lnW_nSZYXnW"),
 ]
 
 

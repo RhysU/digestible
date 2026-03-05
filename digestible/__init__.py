@@ -34,6 +34,16 @@ def digest(o: JSONType) -> str:
     """Return a length-24 Base64URL digest of the JSON encoding of *o*."""
     h = hashlib.shake_128()
     h.update(b"digestible")
-    for chunk in json.JSONEncoder().iterencode(o):
+    encoder = json.JSONEncoder(
+        skipkeys=False,
+        ensure_ascii=True,
+        check_circular=True,
+        allow_nan=True,
+        sort_keys=True,          # non-default
+        indent=None,
+        separators=(",", ":"),   # non-default
+        default=None,
+    )
+    for chunk in encoder.iterencode(o):
         h.update(chunk.encode())
     return base64.urlsafe_b64encode(b"\xf7\xb7" + h.digest(16)).decode()
