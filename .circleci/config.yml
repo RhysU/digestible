@@ -26,6 +26,15 @@ jobs:
       - run: python -m pip install ".[dev]"
       - run: python -m pytest tests
 
+  docs:
+    executor:
+      name: python-docker
+      version: "3.13"
+    steps:
+      - checkout
+      - run: python -m pip install ".[docs]"
+      - run: make docs
+
 workflows:
   matrix-tests:
     jobs:
@@ -34,3 +43,4 @@ workflows:
             parameters:
               version:
                 - "3.13"
+      - docs
