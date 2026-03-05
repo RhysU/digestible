@@ -18,9 +18,13 @@ license = "MPL-2.0"
 
 [project.optional-dependencies]
 dev = [
+    "black",
     "flake8",
     "pytest",
 ]
+
+[tool.black]
+line-length = 79
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
