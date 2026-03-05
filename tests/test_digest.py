@@ -6,24 +6,25 @@ import pytest
 from digestible import digest
 
 CASES = [
-    (None, "fvakllLWEjyo5TJ5Vm8RPA=="),
-    (True, "5DwJoS3S3e463uya639ERQ=="),
-    (False, "jvKimP7exHmPJTQKYeDkzQ=="),
-    (0, "HKHFFK9G1Rsgl2SYaNDBQg=="),
-    (42, "97xJ31IQthW2Y-IB3-VvYw=="),
-    (3.14, "245yMF1Nk6pygHN4dJJFiQ=="),
-    ("", "skm2cZ8ndcZDf3t-8kBUdw=="),
-    ("hello", "-z30OhN5TYcm6HuZu-gxoQ=="),
-    ([], "cS4tc63OQjWs0nTlAVv5Ug=="),
-    ([1, 2, 3], "7hUP-kq_pJB0r4R60YUeqA=="),
-    ({}, "nKVsf7y9mMmkvgdU4R8-Kg=="),
-    ({"a": {"b": 1}}, "TBE71TpLAtEtmOVy3U17uA=="),
-    ({"x": [1, {"y": 2}]}, "dlZ1Y3ep3XksfPOKCizN2Q=="),
-    ([{"a": 1}, {"b": [2, 3]}], "qHBOdNQT-XUGyqd6CsoYOA=="),
+    (None, "97d-9qSWUtYSPKjlMnlWbxE8"),
+    (True, "97fkPAmhLdLd7jre7Jrrf0RF"),
+    (False, "97eO8qKY_t7EeY8lNAph4OTN"),
+    (0, "97ccocUUr0bVGyCXZJho0MFC"),
+    (42, "97f3vEnfUhC2FbZj4gHf5W9j"),
+    (3.14, "97fbjnIwXU2TqnKAc3h0kkWJ"),
+    ("", "97eySbZxnyd1xkN_e37yQFR3"),
+    ("hello", "97f7PfQ6E3lNhyboe5m76DGh"),
+    ([], "97dxLi1zrc5CNazSdOUBW_lS"),
+    ([1, 2, 3], "97fuFQ_6Sr-kkHSvhHrRhR6o"),
+    ({}, "97ecpWx_vL2YyaS-B1ThHz4q"),
+    ({"a": {"b": 1}}, "97dMETvVOksC0S2Y5XLdTXu4"),
+    ({"x": [1, {"y": 2}]}, "97d2VnVjd6ndeSx884oKLM3Z"),
+    ([{"a": 1}, {"b": [2, 3]}], "97eocE501BP5dQbKp3oKyhg4"),
 ]
 
 
 @pytest.mark.parametrize("value, expected", CASES)
 def test_digest(value, expected):
     assert digest(value) == expected
-    assert len(digest(value)) == 24
+    assert digest(value).startswith("97")
+    assert not digest(value).endswith("==")

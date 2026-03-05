@@ -36,4 +36,4 @@ def digest(o: JSONType) -> str:
     h.update(b"digestible")
     for chunk in json.JSONEncoder().iterencode(o):
         h.update(chunk.encode())
-    return base64.urlsafe_b64encode(h.digest(16)).decode()
+    return base64.urlsafe_b64encode(b"\xf7\xb7" + h.digest(16)).decode()
