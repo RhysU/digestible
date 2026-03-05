@@ -7,7 +7,7 @@ documentation deployment.
 
 ### `test`
 
-Runs the test suite across multiple Python versions and NumPy versions.
+Runs the test suite across possibly multiple Python versions.
 
 ### `deploy-docs`
 
