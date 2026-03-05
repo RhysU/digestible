@@ -8,10 +8,10 @@ import hashlib
 import json
 
 
+# Recursive type describing values representable in JSON
 type JSONType = (
     dict[str, JSONType] | list[JSONType] | str | int | float | bool | None
 )
-"""Recursive type describing values representable in JSON."""
 
 
 def digest(o: JSONType) -> str:
