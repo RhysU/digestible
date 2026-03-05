@@ -20,6 +20,7 @@ license = "MPL-2.0"
 dev = [
     "black",
     "flake8",
+    "mypy",
     "pytest",
 ]
 docs = [
@@ -28,6 +29,9 @@ docs = [
 
 [tool.black]
 line-length = 79
+
+[tool.mypy]
+strict = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
